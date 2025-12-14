@@ -37,20 +37,20 @@ function Services() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-8">
-            <div className="bg-white rounded-md h-52 flex flex-col p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-md md:h-52 flex flex-col p-4">
               <p className="text-lg font-medium mb-2">Web Design + Development</p>
               <p className="text-sm text-muted-foreground leading-relaxed">We replace renting slow, fragile platforms with owning a custom-engineered asset that offers superior speed, security, and long-term investment value</p>
               <p className="text-sm font-medium mt-2">Projects start from $400</p>
             </div>
-            <div className="bg-white rounded-md row-span-2 flex flex-col p-4">
+            <div className="bg-white rounded-md md:row-span-2 flex flex-col p-4">
               <p className="text-lg font-medium mb-2">Maintenance & Support</p>
               <p className="text-xs text-muted-foreground leading-relaxed mb-3">We don't sell traditional "maintenance" because your custom site is engineered to be crash-proof; instead, this is an investment in continuous growth rather than just repairs. Unlike Framer or WebFlow owners who pay to fix broken plugins, you pay for a dedicated partner to actively improve your asset, ensuring your digital presence appreciates in value over time.</p>
 
               <p className="text-xs text-muted-foreground leading-relaxed mb-1"><span className="font-medium text-foreground">Priority Access:</span> You skip the waiting line; when you need a critical update for a marketing push, your request is executed immediately by the team who knows your code best.</p>
               <p className="text-xs text-muted-foreground leading-relaxed"><span className="font-medium text-foreground">Future-Proofing:</span> We proactively update your site's underlying technology to modern standards, guaranteeing it never becomes "legacy" software that needs a costly rebuild.</p>
             </div>
-            <div className="bg-white rounded-md h-44 flex flex-col p-4">
+            <div className="bg-white rounded-md md:h-44 flex flex-col p-4">
               <p className="text-lg font-medium mb-2">Web Hosting</p>
               <p className="text-xs text-muted-foreground leading-relaxed">We host on Cloudflare's Network to ensure instant load times and enterprise-grade security, including SSL and DDoS protection. Our continuous deployment pipeline pushes updates live instantly, keeping your site current with absolutely zero downtime.</p>
             </div>

@@ -10,21 +10,36 @@ export function Hero() {
 
         video.playbackRate = 1.5;
 
-        const handleEnded = () => {
-            video.currentTime = 0;
-            setTimeout(() => video.play(), 2000);
+        const attemptPlay = () => {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    // Autoplay was prevented, video will need user interaction
+                    // This is expected on some mobile browsers
+                });
+            }
         };
 
-        const handleLoadedData = () => {
-            setTimeout(() => video.play(), 2000);
+        const handleEnded = () => {
+            video.currentTime = 0;
+            setTimeout(attemptPlay, 2000);
+        };
+
+        const handleCanPlay = () => {
+            setTimeout(attemptPlay, 2000);
         };
 
         video.addEventListener('ended', handleEnded);
-        video.addEventListener('loadeddata', handleLoadedData);
+        video.addEventListener('canplaythrough', handleCanPlay);
+
+        // Attempt to play immediately if already loaded
+        if (video.readyState >= 3) {
+            setTimeout(attemptPlay, 2000);
+        }
 
         return () => {
             video.removeEventListener('ended', handleEnded);
-            video.removeEventListener('loadeddata', handleLoadedData);
+            video.removeEventListener('canplaythrough', handleCanPlay);
         };
     }, []);
 
@@ -53,6 +68,7 @@ export function Hero() {
                         ref={videoRef}
                         className="w-full h-auto rounded-lg shadow-lg"
                         src="/PureGlow-ex.mp4"
+                        autoPlay
                         muted
                         playsInline
                         preload="auto"
