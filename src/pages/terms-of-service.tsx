@@ -1,9 +1,15 @@
 import { FloatingHeader } from '../components/ui/floating-header';
 import { Footer } from '../components/ui/large-name-footer';
+import { SEO } from '../components/SEO';
 
 export default function TermsOfService() {
     return (
         <div className="relative w-full min-h-screen flex flex-col">
+            <SEO
+                title="Terms of Service"
+                description="Read Resizing's terms and conditions for using our website and web design services. Understand your rights and responsibilities."
+                canonical="https://resizing.ca/tos"
+            />
             <FloatingHeader />
 
             <main className="flex-grow pt-32 pb-16 px-4 bg-gray-100" style={{

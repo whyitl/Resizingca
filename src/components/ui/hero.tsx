@@ -56,6 +56,8 @@ export function Hero() {
                         muted
                         playsInline
                         preload="auto"
+                        aria-hidden="true"
+                        aria-label="Decorative animation showing web design work"
                     />
                 </div>
             </div>

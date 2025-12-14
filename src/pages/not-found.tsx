@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 
 export default function NotFound() {
     return (
         <div className="min-h-screen bg-black flex flex-col items-center justify-center px-4 text-center">
+            <SEO
+                title="Page Not Found"
+                description="The page you're looking for doesn't exist."
+                noIndex={true}
+            />
             <h1 className="text-8xl font-bold text-white mb-4">404</h1>
             <p className="text-xl text-gray-400 mb-8">
                 Oops! The page you're looking for doesn't exist.

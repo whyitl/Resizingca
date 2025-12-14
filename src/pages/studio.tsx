@@ -1,10 +1,16 @@
 import { FloatingHeader } from '../components/ui/floating-header';
 import { Footer } from '../components/ui/large-name-footer';
 import { GetInTouch } from '../components/ui/get-in-touch';
+import { SEO } from '../components/SEO';
 
 export default function Studio() {
     return (
         <div className="relative w-full min-h-screen">
+            <SEO
+                title="The Studio"
+                description="Resizing is a multidisciplinary web design studio based in Calgary, Alberta, Canada. We blend aesthetic precision with business performance for measurable growth."
+                canonical="https://resizing.ca/studio"
+            />
             <FloatingHeader />
 
             {/* Main content with diagonal lines background */}
@@ -65,7 +71,7 @@ export default function Studio() {
                                 <div className="pt-4">
                                     <img
                                         src="/StudioLowPoly.webp"
-                                        alt="Studio"
+                                        alt="Resizing web design studio workspace in Calgary, Alberta"
                                         className="w-full rounded-lg shadow-md"
                                     />
                                 </div>

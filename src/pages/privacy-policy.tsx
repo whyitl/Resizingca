@@ -1,9 +1,15 @@
 import { FloatingHeader } from '../components/ui/floating-header';
 import { Footer } from '../components/ui/large-name-footer';
+import { SEO } from '../components/SEO';
 
 export default function PrivacyPolicy() {
     return (
         <div className="relative w-full min-h-screen flex flex-col">
+            <SEO
+                title="Privacy Policy"
+                description="Learn how Resizing collects, uses, and protects your personal information. Read our privacy policy for details on data handling and your rights."
+                canonical="https://resizing.ca/privacy-policy"
+            />
             <FloatingHeader />
 
             <main className="flex-grow pt-32 pb-16 px-4 bg-gray-100" style={{

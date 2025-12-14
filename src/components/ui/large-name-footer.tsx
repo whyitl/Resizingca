@@ -36,14 +36,14 @@ function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-start">
                     <div className="mb-8 md:mb-0 flex flex-col justify-between h-full">
                         <div>
-                            <h1 className="text-left text-3xl md:text-5xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-900 select-none mb-4 md:mb-0 pb-2" style={{ lineHeight: 1 }}>
+                            <h2 className="text-left text-3xl md:text-5xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-900 select-none mb-4 md:mb-0 pb-2" style={{ lineHeight: 1 }}>
                                 Resizing
-                            </h1>
+                            </h2>
                             <div className="mt-4 space-y-1">
                                 <p className="text-sm font-medium" style={{ color: '#666' }}>
                                     Currently {activity}, In Calgary, AB
                                 </p>
-                                <a href="mailto:contact@resizing.ca" className="text-sm block hover:underline" style={{ color: '#666' }}>contact@resizing.ca</a>
+                                <a href="mailto:contact@resizing.ca" className="text-sm block hover:underline" style={{ color: '#666' }} aria-label="Email Resizing at contact@resizing.ca">contact@resizing.ca</a>
                             </div>
                         </div>
                         <p className="text-sm mt-5" style={{ color: '#666' }}>
@@ -52,7 +52,7 @@ function Footer() {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         <div>
-                            <h3 className="font-semibold mb-4" style={{ color: '#1a1a1a' }}>Stuff</h3>
+                            <h3 className="font-semibold mb-4" style={{ color: '#1a1a1a' }}>Navigation</h3>
                             <ul className="space-y-2">
                                 <li>
                                     <a href="/#services" className="hover:text-black hover:underline" style={{ color: '#666' }}>
@@ -80,12 +80,26 @@ function Footer() {
                             <h3 className="font-semibold mb-4" style={{ color: '#1a1a1a' }}>Socials</h3>
                             <ul className="space-y-2">
                                 <li>
-                                    <a href="https://instagram.com/resizing" className="hover:text-black hover:underline" style={{ color: '#666' }}>
+                                    <a
+                                        href="https://instagram.com/resizing"
+                                        className="hover:text-black hover:underline"
+                                        style={{ color: '#666' }}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Follow Resizing on Instagram (opens in new tab)"
+                                    >
                                         Instagram
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://linkedin.com/company/resizing" className="hover:text-black hover:underline" style={{ color: '#666' }}>
+                                    <a
+                                        href="https://linkedin.com/company/resizing"
+                                        className="hover:text-black hover:underline"
+                                        style={{ color: '#666' }}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Connect with Resizing on LinkedIn (opens in new tab)"
+                                    >
                                         LinkedIn
                                     </a>
                                 </li>

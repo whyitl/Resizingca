@@ -40,8 +40,8 @@ export function FloatingHeader() {
 					'bg-background/95 supports-[backdrop-filter]:bg-background/80 backdrop-blur-lg',
 				)}
 			>
-				<nav className="flex items-center justify-between p-1.5">
-					<a href="/" className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1">
+				<nav className="flex items-center justify-between p-1.5" aria-label="Main navigation">
+					<a href="/" className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1" aria-label="Resizing - Home">
 						<p className="text-base font-normal">Resizing</p>
 					</a>
 					<div className="flex items-center gap-2">
@@ -73,8 +73,10 @@ export function FloatingHeader() {
 								variant="outline"
 								onClick={() => setOpen(!open)}
 								className="lg:hidden"
+								aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+								aria-expanded={open}
 							>
-								<MenuIcon className="size-4" />
+								<MenuIcon className="size-4" aria-hidden="true" />
 							</Button>
 							<SheetContent
 								className="bg-background/95 supports-[backdrop-filter]:bg-background/80 gap-0 backdrop-blur-lg"

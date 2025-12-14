@@ -5,10 +5,14 @@ import { DiagonalCard } from '../components/ui/diagonal-card';
 import { NewSection } from '../components/ui/new-section';
 import { GetInTouch } from '../components/ui/get-in-touch';
 import { Footer } from '../components/ui/large-name-footer';
+import { SEO } from '../components/SEO';
 
 export default function Home() {
     return (
         <div className="relative w-full">
+            <SEO
+                canonical="https://resizing.ca/"
+            />
             <FloatingHeader />
 
             <Hero />

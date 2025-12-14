@@ -1,6 +1,7 @@
 import { FloatingHeader } from '../components/ui/floating-header';
 import { GetInTouch } from '../components/ui/get-in-touch';
 import { Footer } from '../components/ui/large-name-footer';
+import { SEO } from '../components/SEO';
 
 export default function Contact() {
     return (
@@ -13,6 +14,11 @@ export default function Contact() {
             display: 'flex',
             flexDirection: 'column'
         }}>
+            <SEO
+                title="Contact"
+                description="Get in touch with Resizing. We'd love to hear about your web design project ideas. Contact our Calgary-based design studio today."
+                canonical="https://resizing.ca/contact"
+            />
             <FloatingHeader />
             <div className="pt-32 flex flex-col flex-grow justify-between">
                 <main className="flex-grow flex items-center pb-48">
