@@ -8,6 +8,7 @@ const PrivacyPolicy = lazy(() => import('./pages/privacy-policy'));
 const TermsOfService = lazy(() => import('./pages/terms-of-service'));
 const Contact = lazy(() => import('./pages/contact'));
 const Studio = lazy(() => import('./pages/studio'));
+const NotFound = lazy(() => import('./pages/not-found'));
 
 // Simple loading fallback
 const PageLoader = () => (
@@ -27,6 +28,7 @@ export default function App() {
 					<Route path="/tos" element={<TermsOfService />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/studio" element={<Studio />} />
+					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</Suspense>
 		</Router>
