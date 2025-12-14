@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your actual domain when deployed)
+# Sitemap: https://yourdomain.com/sitemap.xml
+
+# Disallow crawling of development/build artifacts
+Disallow: /node_modules/
+Disallow: /.vite/

@@ -1,0 +1,64 @@
+import { useEffect, useRef } from 'react';
+import { Button } from './button';
+
+export function Hero() {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        video.playbackRate = 1.5;
+
+        const handleEnded = () => {
+            video.currentTime = 0;
+            setTimeout(() => video.play(), 2000);
+        };
+
+        const handleLoadedData = () => {
+            setTimeout(() => video.play(), 2000);
+        };
+
+        video.addEventListener('ended', handleEnded);
+        video.addEventListener('loadeddata', handleLoadedData);
+
+        return () => {
+            video.removeEventListener('ended', handleEnded);
+            video.removeEventListener('loadeddata', handleLoadedData);
+        };
+    }, []);
+
+    return (
+        <div className="min-h-screen px-6 py-10 flex items-center">
+            <div className="max-w-6xl mx-auto w-full -mt-48 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="flex-1">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight">
+                        Intentional web design<br />
+                        for measurable momentum
+                    </h1>
+                    <Button
+                        variant="link"
+                        className="mt-1 p-0 h-auto font-semibold justify-start text-primary"
+                        style={{ paddingLeft: 0, marginLeft: 0 }}
+                        onClick={() => {
+                            const element = document.getElementById('services');
+                            element?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
+                        Learn More
+                    </Button>
+                </div>
+                <div className="flex-1 w-full">
+                    <video
+                        ref={videoRef}
+                        className="w-full h-auto rounded-lg shadow-lg"
+                        src="/PureGlow-ex.mp4"
+                        muted
+                        playsInline
+                        preload="auto"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+}
