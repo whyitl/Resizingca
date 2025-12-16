@@ -11,7 +11,7 @@ interface SEOProps {
 
 const defaultMeta = {
     title: 'Resizing - Web Design Studio',
-    description: 'Budget-friendly web design and development studio. Quality websites at affordable prices - projects start from $400. Modern, responsive designs that won\'t break the bank.',
+    description: 'Budget-friendly web design and development studio. Quality websites at affordable prices - projects start from $500. Modern, responsive designs that won\'t break the bank.',
     siteUrl: 'https://resizing.ca',
     ogImage: 'https://resizing.ca/socialshare.png',
 };

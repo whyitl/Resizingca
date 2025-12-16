@@ -3,6 +3,17 @@
 import { Link } from "react-router-dom";
 
 function Services() {
+  // Calculate current quarter based on month
+  const getCurrentQuarter = () => {
+    const month = new Date().getMonth(); // 0-11
+    if (month >= 0 && month <= 2) return 'Q1'; // Jan-Mar
+    if (month >= 3 && month <= 5) return 'Q2'; // Apr-Jun
+    if (month >= 6 && month <= 8) return 'Q3'; // Jul-Sep
+    return 'Q4'; // Oct-Dec
+  };
+
+  const currentQuarter = getCurrentQuarter();
+  const currentYear = new Date().getFullYear();
 
   return (
     <div className="w-full pt-32 lg:pt-48" style={{
@@ -28,11 +39,12 @@ function Services() {
               </p>
               <div>
                 <Link
-                  to="/contact"
-                  className="mt-4 inline-block px-6 py-3 rounded-md font-semibold text-white transition-colors duration-200 hover:opacity-90"
+                  to="/studio"
+                  className="mt-4 inline-flex flex-col items-start justify-center text-left px-6 py-3 rounded-md font-semibold text-white transition-colors duration-200 hover:opacity-90"
                   style={{ backgroundColor: '#3B5249' }}
                 >
-                  Reach Out
+                  <span>Learn Our approach ↗</span>
+                  <span className="text-xs font-normal opacity-90">Limited Openings in {currentQuarter} {currentYear}</span>
                 </Link>
               </div>
             </div>
@@ -41,7 +53,7 @@ function Services() {
             <div className="bg-white rounded-md md:h-52 flex flex-col p-4">
               <p className="text-lg font-medium mb-2">Web Design + Development</p>
               <p className="text-sm text-muted-foreground leading-relaxed">We replace renting slow, fragile platforms with owning a custom-engineered asset that offers superior speed, security, and long-term investment value</p>
-              <p className="text-sm font-medium mt-2">Projects start from $400</p>
+              <p className="text-sm font-medium mt-2">Projects start from $500</p>
             </div>
             <div className="bg-white rounded-md md:row-span-2 flex flex-col p-4">
               <p className="text-lg font-medium mb-2">Maintenance & Support</p>

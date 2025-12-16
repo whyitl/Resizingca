@@ -47,26 +47,6 @@ export default function Studio() {
                                     The Studio
                                 </h1>
 
-                                {/* 2 Green boxes */}
-                                <div className="flex flex-col gap-4 pt-4">
-                                    <div
-                                        className="w-full rounded-lg p-6 flex items-center"
-                                        style={{ backgroundColor: '#3B5249' }}
-                                    >
-                                        <p className="text-sm text-white leading-relaxed font-bold">
-                                            Resizing was founded out of a passion for technology. It operates as a multidisciplinary design studio based in Calgary, Alberta, Canada.
-                                        </p>
-                                    </div>
-                                    <div
-                                        className="w-full rounded-lg p-6 flex items-center"
-                                        style={{ backgroundColor: '#3B5249' }}
-                                    >
-                                        <p className="text-sm text-white leading-relaxed font-bold">
-                                            Monday - Friday, 8am - 6pm MST
-                                        </p>
-                                    </div>
-                                </div>
-
                                 {/* Studio Image */}
                                 <div className="pt-4">
                                     <img
@@ -75,16 +55,35 @@ export default function Studio() {
                                         className="w-full rounded-lg shadow-md"
                                     />
                                 </div>
+
+                                {/* Pricing Options */}
+                                <div className="mt-6">
+                                    <p className="text-lg md:text-xl text-gray-600 mb-4">Our model is simple and flexible:</p>
+                                    <div className="space-y-4">
+                                        <div className="border-l-4 border-gray-900 pl-4 py-3 bg-gray-50 rounded-r-lg">
+                                            <p className="text-lg md:text-xl font-semibold text-gray-900">$500 one-time build fee</p>
+                                            <p className="text-base text-gray-600 mt-1">Then optionally add $30/month for ongoing changes when you need them</p>
+                                        </div>
+                                        <div className="flex items-center justify-center">
+                                            <span className="text-gray-400 text-sm font-medium">— OR —</span>
+                                        </div>
+                                        <div className="border-l-4 border-gray-900 pl-4 py-3 bg-gray-50 rounded-r-lg">
+                                            <p className="text-lg md:text-xl font-semibold text-gray-900">$175/month with no upfront cost</p>
+                                            <p className="text-base text-gray-600 mt-1">Includes 24/7 changes and continuous updates</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Right side - paragraphs */}
                             <div className="space-y-6 md:pt-32">
                                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                                    Resizing is a web design studio that blends aesthetic precision with business performance. We were founded on the belief that exceptional design should do more than look great — it should drive measurable growth for small and scaling businesses.
+                                    Resizing is a web design studio that blends aesthetic precision with business performance, built specifically for small and scaling businesses that want a professional online presence without the overhead of managing a complex website stack. Most of our clients aren't looking to run a content operation or constantly tweak a CMS — they just need a fast, trustworthy site that represents the business well, generates leads, and stays out of the way while they focus on delivering their service.
                                 </p>
                                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                                    Our clients come to us for high-conversion websites built on modern, reliable technology stacks that align beautifully with their brand. Most of our growth has come organically through social channels, where we've built a community of founders, developers, and designers who believe in purposeful digital craftsmanship. <span className="font-medium text-gray-900">@resizing.studio</span>
+                                    Technically, we specialize in static HTML websites because they're inherently more secure and stable than database-driven builds. With no server-side database layer, there's far fewer moving parts to exploit — which significantly reduces the attack surface compared to traditional WordPress/CMS setups. The result is a site that loads quickly, stays reliable, and requires minimal maintenance.
                                 </p>
+                                
                                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                                     Professionally, I've spent over 1.5 years designing and developing websites across industries — from local startups to mid-sized companies expanding across the Calgary Metropolitan Area.
                                 </p>

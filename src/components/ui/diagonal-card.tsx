@@ -45,7 +45,7 @@ function DiagonalCard() {
                         {/* Content overlay */}
                         <div className="relative z-10 flex flex-col items-center justify-center h-full min-h-[160px] px-8 py-8 text-center">
                             <h3 className="text-xl md:text-2xl font-bold tracking-tight text-gray-900 mb-3">
-                                See the studio ↗
+                                Learn Our approach ↗
                             </h3>
                             <p className="text-sm text-gray-600 max-w-xl leading-relaxed">
                                 Limited Openings in <span className="font-semibold text-gray-900">{currentQuarter}</span> {currentYear}
