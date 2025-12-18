@@ -10,8 +10,8 @@ interface SEOProps {
 }
 
 const defaultMeta = {
-    title: 'Resizing - Web Design Studio',
-    description: 'Budget-friendly web design and development studio. Quality websites at affordable prices - projects start from $500. Modern, responsive designs that won\'t break the bank.',
+    title: 'Resizing Studio | Affordable Web Design & Development',
+    description: 'Resizing Studio offers budget-friendly web design and development. Quality websites at affordable prices - projects start from $500. Modern, responsive designs that won\'t break the bank.',
     siteUrl: 'https://resizing.ca',
     ogImage: 'https://resizing.ca/socialshare.png',
 };
@@ -24,7 +24,7 @@ export function SEO({
     ogImage = defaultMeta.ogImage,
     noIndex = false,
 }: SEOProps) {
-    const fullTitle = title === defaultMeta.title ? title : `${title} | Resizing`;
+    const fullTitle = title === defaultMeta.title ? title : `${title} | Resizing Studio`;
     const canonicalUrl = canonical || defaultMeta.siteUrl;
 
     return (
